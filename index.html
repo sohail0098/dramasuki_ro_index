@@ -342,7 +342,7 @@
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Map</span>
-          <p>Here's my current location:</p>
+          <p>Here's your current (approx.) location:</p>
           <div class="about__content-skills">
             <div class="mapimg"></div>
             <script>
@@ -350,8 +350,15 @@
               var lat = position.coords.latitude;
               var lon = position.coords.longitude;
               console.log(lat, lon);
-              var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyChRcvshA89sM_zxVo025STi5hvGVlLIeo";
+              var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=";
+              img_url += lat + "," + lon;
+              img_url += "&zoom=14&size=600x500&sensor=false&key=";
+              img_url += "AIzaSyDTkQgxd7cXtOQIuQ7iToAk-DmB4zcZkNk";
+              img_url += "&markers=color:red%7Clabel:S%7C"+lat+","+lon;
               document.querySelector('.mapimg').innerHTML = "<img src='"+img_url+"'>";
+              document.querySelector('.mapimg').innerHTML += "<p><br>Latitude: "+lat+"<br>Longitude: "+lon+"</p>";
+              document.querySelector('.mapimg').innerHTML += "<p><br>Street View:</p>";
+              document.querySelector('.mapimg').innerHTML += "<img src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=AIzaSyDTkQgxd7cXtOQIuQ7iToAk-DmB4zcZkNk'>";
             });
             </script>
           </div>
