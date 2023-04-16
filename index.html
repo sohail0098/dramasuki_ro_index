@@ -321,9 +321,20 @@
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Video / Audio Embed</span>
+          <hr>
           <div class="about__content-skills">
+            <p>Video Embed</p>
             <iframe width="1280" height="720" src="https://www.youtube.com/embed/2cm7MEONP48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
+          <hr>
+          <div>
+            <p>Audio Embed</p>
+            <audio controls>
+              <source src="./audio.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <hr>
         </h2>
       </div>
     </section>
@@ -339,7 +350,7 @@
               var lat = position.coords.latitude;
               var lon = position.coords.longitude;
               console.log(lat, lon);
-              var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
+              var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyChRcvshA89sM_zxVo025STi5hvGVlLIeo";
               document.querySelector('.mapimg').innerHTML = "<img src='"+img_url+"'>";
             });
             </script>
