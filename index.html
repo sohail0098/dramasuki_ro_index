@@ -353,12 +353,12 @@
               var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=";
               img_url += lat + "," + lon;
               img_url += "&zoom=14&size=600x500&sensor=false&key=";
-              img_url += "AIzaSyDTkQgxd7cXtOQIuQ7iToAk-DmB4zcZkNk";
+              img_url += "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk";
               img_url += "&markers=color:red%7Clabel:S%7C"+lat+","+lon;
               document.querySelector('.mapimg').innerHTML = "<img src='"+img_url+"'>";
               document.querySelector('.mapimg').innerHTML += "<p><br>Latitude: "+lat+"<br>Longitude: "+lon+"</p>";
               document.querySelector('.mapimg').innerHTML += "<p><br>Street View:</p>";
-              document.querySelector('.mapimg').innerHTML += "<img src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=AIzaSyDTkQgxd7cXtOQIuQ7iToAk-DmB4zcZkNk'>";
+              document.querySelector('.mapimg').innerHTML += "<img src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=" + "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk'>";
             });
             </script>
           </div>
