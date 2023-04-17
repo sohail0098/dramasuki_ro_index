@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Personal Portfolio</title>
     <meta name="description" content="Portfolio Template for Developer" />
-
     <link rel="stylesheet" href="css/style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -237,6 +235,13 @@
               is built using Java and Android Studio. It uses the WiKipedia API to fetch the content and display it in the application.</p>
             <hr>
             <p>Link: <a target="_blank" href="https://github.com/sohail0098/pocketwiki">PocketWiKi</a></p>
+            <hr>
+            <p>Screenshots:</p>
+            <img src="./assets/png/pocketwiki1.png" alt="PocketWiKi" style="max-height: 500px;">
+            <img src="./assets/png/pocketwiki2.png" alt="PocketWiKi" style="max-height: 500px;">
+            <img src="./assets/png/pocketwiki3.png" alt="PocketWiKi" style="max-height: 500px;">
+            <img src="./assets/png/pocketwiki4.png" alt="PocketWiKi" style="max-height: 500px;">
+            <img src="./assets/png/pocketwiki5.png" alt="PocketWiKi" style="max-height: 500px;">
           </div>
           
           <div id="quizzard" class="tabcontent">
@@ -254,6 +259,9 @@
             </ul>
             <hr>
             <p>Link: <a target="_blank" href="https://github.com/sohail0098/quizzard">Not-so-Simple Quizzard</a></p>
+            <hr>
+            <p>Screenshot:</p>
+            <img src="./assets/png/quizzard.png" alt="PocketWiKi" style="max-height: 450px;">
           </div>
           
           <div id="quizandro" class="tabcontent">
@@ -324,13 +332,15 @@
           <hr>
           <div class="about__content-skills">
             <p>Video Embed</p>
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/2cm7MEONP48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="videowrapper">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2cm7MEONP48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
           </div>
           <hr>
           <div>
             <p>Audio Embed</p>
             <audio controls>
-              <source src="./audio.mp3" type="audio/mpeg">
+              <source src="./assets/audio.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
             </audio>
           </div>
@@ -358,7 +368,7 @@
               document.querySelector('.mapimg').innerHTML = "<img src='"+img_url+"'>";
               document.querySelector('.mapimg').innerHTML += "<p><br>Latitude: "+lat+"<br>Longitude: "+lon+"</p>";
               document.querySelector('.mapimg').innerHTML += "<p><br>Street View:</p>";
-              document.querySelector('.mapimg').innerHTML += "<img src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=" + "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk'>";
+              document.querySelector('.mapimg').innerHTML += "<img class='center-fit' src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=" + "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk'>";
             });
             </script>
           </div>
