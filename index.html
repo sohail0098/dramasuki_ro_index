@@ -261,7 +261,7 @@
             <p>Link: <a target="_blank" href="https://github.com/sohail0098/quizzard">Not-so-Simple Quizzard</a></p>
             <hr>
             <p>Screenshot:</p>
-            <img src="./assets/png/quizzard.png" alt="PocketWiKi" style="max-height: 450px;">
+            <img width="100%" height="100%" src="./assets/png/quizzard.png" alt="PocketWiKi">
           </div>
           
           <div id="quizandro" class="tabcontent">
@@ -326,7 +326,7 @@
       </div>
     </section>
     <section id="musicvideo" class="musicvideo sec-pad">
-      <div class="main-container">
+      <div class="main-container" style="text-align: center;">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Video / Audio Embed</span>
           <hr>
@@ -352,27 +352,27 @@
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Map</span>
-          <p>Here's your current (approx.) location:</p>
-          <div class="about__content-skills">
-            <div class="mapimg"></div>
-            <script>
-            navigator.geolocation.getCurrentPosition(function(position) {
-              var lat = position.coords.latitude;
-              var lon = position.coords.longitude;
-              console.log(lat, lon);
-              var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=";
-              img_url += lat + "," + lon;
-              img_url += "&zoom=14&size=600x500&sensor=false&key=";
-              img_url += "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk";
-              img_url += "&markers=color:red%7Clabel:S%7C"+lat+","+lon;
-              document.querySelector('.mapimg').innerHTML = "<img src='"+img_url+"'>";
-              document.querySelector('.mapimg').innerHTML += "<p><br>Latitude: "+lat+"<br>Longitude: "+lon+"</p>";
-              document.querySelector('.mapimg').innerHTML += "<p><br>Street View:</p>";
-              document.querySelector('.mapimg').innerHTML += "<img class='center-fit' src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=" + "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk'>";
-            });
-            </script>
+          <div class="mapimg" style="text-align: center;">
+            <p>Here's your current (approx.) location:</p>
           </div>
+          <script>
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            console.log(lat, lon);
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=";
+            img_url += lat + "," + lon;
+            img_url += "&zoom=14&size=600x300&sensor=false&key=";
+            img_url += "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk";
+            img_url += "&markers=color:red%7Clabel:S%7C"+lat+","+lon;
+            document.querySelector('.mapimg').innerHTML += "<img width='50%' height='50%' src='"+img_url+"'>";
+            document.querySelector('.mapimg').innerHTML += "<p><br>Latitude: "+lat+"<br>Longitude: "+lon+"</p>";
+            document.querySelector('.mapimg').innerHTML += "<p><br>Street View:</p>";
+            document.querySelector('.mapimg').innerHTML += "<img width='50%' height='50%' src='https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+lat+","+lon+"&fov=180&heading=235&pitch=10&key=" + "AIzaSy" + "DTkQgxd7c" + "XtOQIuQ7iT" + "oAk-DmB4" + "zcZkNk'>";
+          });
+          </script>
         </h2>
+      </div>
     </section>
     <footer class="main-footer">
       <div class="main-container">
